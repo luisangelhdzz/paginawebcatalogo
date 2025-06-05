@@ -20,8 +20,7 @@ body {
 /* HEADER */
 
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.225), rgba(0, 0, 0, 0.7)),
-    url(conmami.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.225), rgba(0, 0, 0, 0.7)), url(conmami.jpg);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,6 +39,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  z-index: 1000;
 }
 
 .logo {
@@ -185,11 +185,7 @@ body {
 /* SERVICES */
 
 .services {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url(fondo2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(fondo2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -360,7 +356,21 @@ body {
   color: #ce967b;
 }
 
-/* RESPONSIVE */
+/* EXTRA PRODUCTS (VER MÁS) */
+
+.extra-products {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.extra-products.show {
+  display: flex;
+}
+
+/* RESPONSIVE - TABLETS */
 
 @media (max-width: 991px) {
   .header-content h1 {
@@ -402,6 +412,8 @@ body {
   }
 }
 
+/* RESPONSIVE - CELULARES */
+
 @media (max-width: 600px) {
   .menu-label {
     display: block;
@@ -419,15 +431,40 @@ body {
     top: 60px;
     right: 20px;
     border-radius: 8px;
+    z-index: 1000;
+  }
+
+  .navbar ul {
+    padding: 0;
   }
 
   .navbar ul li {
     float: none;
+    text-align: center;
   }
 
   .navbar ul li a {
     padding: 10px 0;
     color: white;
+  }
+
+  .header {
+    min-height: 80vh;
+  }
+
+  .header-content h1 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .header-content p {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .btn-1 {
+    padding: 10px 25px;
+    font-size: 14px;
   }
 
   .coffee-1,
@@ -436,26 +473,54 @@ body {
     max-width: 100%;
   }
 
-  .header-content h1 {
-    font-size: 35px;
+  .coffee-1 img,
+  .services-1 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .services-group,
+  .coffee-group,
+  .blog-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .general {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .general-1 {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .general-1 h2 {
+    font-size: 30px;
     line-height: 40px;
   }
 
-  .header-content p {
-    padding: 0 20px;
+  .general-1 p {
+    font-size: 14px;
+    margin: 0 auto;
+  }
+
+  .services-content h2,
+  .coffee-content h2,
+  .blog h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .link {
+    margin: 20px 0;
   }
 }
-
-/* ← AGREGADO PARA "VER MÁS" → */
-.extra-products {
-  display: none;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.extra-products.show {
-  display: flex;
-}
-
