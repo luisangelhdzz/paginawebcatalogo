@@ -39,7 +39,6 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  z-index: 1000;
 }
 
 .logo {
@@ -164,8 +163,8 @@ body {
 }
 
 .coffee-1 img {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
@@ -228,7 +227,7 @@ body {
 
 .services-1 img {
   width: 180px;
-  height: auto;
+  height: 180px;
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -356,21 +355,7 @@ body {
   color: #ce967b;
 }
 
-/* EXTRA PRODUCTS (VER MÁS) */
-
-.extra-products {
-  display: none;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.extra-products.show {
-  display: flex;
-}
-
-/* RESPONSIVE - TABLETS */
+/* RESPONSIVE */
 
 @media (max-width: 991px) {
   .header-content h1 {
@@ -412,8 +397,6 @@ body {
   }
 }
 
-/* RESPONSIVE - CELULARES */
-
 @media (max-width: 600px) {
   .menu-label {
     display: block;
@@ -431,40 +414,15 @@ body {
     top: 60px;
     right: 20px;
     border-radius: 8px;
-    z-index: 1000;
-  }
-
-  .navbar ul {
-    padding: 0;
   }
 
   .navbar ul li {
     float: none;
-    text-align: center;
   }
 
   .navbar ul li a {
     padding: 10px 0;
     color: white;
-  }
-
-  .header {
-    min-height: 80vh;
-  }
-
-  .header-content h1 {
-    font-size: 30px;
-    line-height: 35px;
-  }
-
-  .header-content p {
-    font-size: 14px;
-    padding: 0 15px;
-  }
-
-  .btn-1 {
-    padding: 10px 25px;
-    font-size: 14px;
   }
 
   .coffee-1,
@@ -473,54 +431,27 @@ body {
     max-width: 100%;
   }
 
-  .coffee-1 img,
-  .services-1 img {
-    width: 100%;
-    height: auto;
-  }
-
-  .services-group,
-  .coffee-group,
-  .blog-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .general {
-    flex-direction: column;
-    padding: 50px 20px;
-  }
-
-  .general-1 {
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  .general-1 h2 {
-    font-size: 30px;
+  .header-content h1 {
+    font-size: 35px;
     line-height: 40px;
   }
 
-  .general-1 p {
-    font-size: 14px;
-    margin: 0 auto;
-  }
-
-  .services-content h2,
-  .coffee-content h2,
-  .blog h2 {
-    font-size: 32px;
-    line-height: 40px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .link {
-    margin: 20px 0;
+  .header-content p {
+    padding: 0 20px;
   }
 }
+
+/* "VER MÁS" OPCIONAL */
+
+.extra-products {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.extra-products.show {
+  display: flex;
+}
+
